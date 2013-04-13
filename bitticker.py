@@ -10,13 +10,13 @@ while True:
        try: 
           page = urllib.request.urlopen('https://mtgox.com')
        except IOError:                  
-          time.sleep(5)
+          time.sleep(1)
    soup = BeautifulSoup(page)
    result = soup.find(id='lastPrice').span.contents[0]
    print(result[1:])
 
    #Write to Arduino
    ser.write(result[1:].encode('utf-8'))
-   time.sleep(30)
+   time.sleep(15)
 
         
