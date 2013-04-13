@@ -1,3 +1,3 @@
-import urllib2 
+import urllib.request
 
 print("hello")
